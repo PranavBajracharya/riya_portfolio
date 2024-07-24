@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:riya_portfolio/screens/i_am_rich/i_am_rich_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,6 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text(
           "My Projects",
         ),
+        automaticallyImplyLeading: false,
         centerTitle: true,
       ),
       body: Container(
@@ -22,7 +24,16 @@ class _HomeScreenState extends State<HomeScreen> {
         child: ListView(
           children: [
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const IAmRichScreen();
+                    },
+                  ),
+                );
+              },
               title: const Text(
                 "I am Rich",
               ),
