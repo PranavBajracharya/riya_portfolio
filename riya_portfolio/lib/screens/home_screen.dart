@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:riya_portfolio/screens/i_am_poor/i_am_poor_screen.dart';
 import 'package:riya_portfolio/screens/i_am_rich/i_am_rich_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -39,7 +40,16 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const IAmPoorScreen();
+                    },
+                  ),
+                );
+              },
               title: const Text(
                 "I am Poor",
               ),
