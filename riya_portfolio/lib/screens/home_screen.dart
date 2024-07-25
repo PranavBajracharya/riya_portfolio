@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:riya_portfolio/magic_8_ball/magic_ball_screen.dart';
 import 'package:riya_portfolio/screens/dice/dice_screen.dart';
 import 'package:riya_portfolio/screens/i_am_poor/i_am_poor_screen.dart';
 import 'package:riya_portfolio/screens/i_am_rich/i_am_rich_screen.dart';
@@ -86,6 +87,21 @@ class _HomeScreenState extends State<HomeScreen> {
                 "Dicee",
               ),
             ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const MagicBallScreen();
+                    },
+                  ),
+                );
+              },
+              title: const Text(
+                "Magic 8 Ball",
+              ),
+            )
           ],
         ),
       ),
