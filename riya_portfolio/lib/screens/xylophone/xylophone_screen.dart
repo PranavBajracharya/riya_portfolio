@@ -22,6 +22,8 @@ class _XylophoneScreenState extends State<XylophoneScreen> {
   Expanded key({
     required Color color,
     required int soundNumber,
+    String? text,
+    Color? textColor,
   }) {
     return Expanded(
       child: ElevatedButton(
@@ -38,7 +40,13 @@ class _XylophoneScreenState extends State<XylophoneScreen> {
         onPressed: () {
           playSound(soundNumber);
         },
-        child: null,
+        child: Text(
+          text ?? 'No Value',
+          style: TextStyle(
+            fontSize: 30.0,
+            color: textColor,
+          ),
+        ),
       ),
     );
   }
@@ -53,30 +61,42 @@ class _XylophoneScreenState extends State<XylophoneScreen> {
             key(
               color: Colors.red,
               soundNumber: 1,
+              // text: 'Sa',
+              textColor: Colors.black,
             ),
             key(
               color: Colors.orange,
               soundNumber: 2,
+              text: 'Re',
+              textColor: Colors.black,
             ),
             key(
               color: Colors.yellow,
               soundNumber: 3,
+              text: 'Ga',
             ),
             key(
               color: Colors.lightGreen,
               soundNumber: 4,
+              text: 'Ma',
             ),
             key(
               color: Colors.green,
               soundNumber: 5,
+              text: 'Pa',
+              textColor: Colors.white,
             ),
             key(
               color: Colors.blue,
               soundNumber: 6,
+              text: 'Dha',
+              textColor: Colors.white,
             ),
             key(
               color: Colors.purple,
               soundNumber: 7,
+              text: 'Ne',
+              textColor: Colors.white,
             ),
           ],
         ),
