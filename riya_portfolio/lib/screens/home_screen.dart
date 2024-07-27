@@ -125,12 +125,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return QuizzlerScreen();
+                      return const QuizzlerScreen();
                     },
                   ),
                 );
               },
-              title: Text('Quizzler'),
+              title: const Text('Quizzler'),
             )
           ],
         ),

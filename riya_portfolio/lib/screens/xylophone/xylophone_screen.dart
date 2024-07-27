@@ -10,20 +10,20 @@ class XylophoneScreen extends StatefulWidget {
 }
 
 class _XylophoneScreenState extends State<XylophoneScreen> {
-  void PlaySound(int soundNumber) {
+  void playSound(int soundNumber) {
     final player = AudioPlayer();
     player.play(
       AssetSource('note$soundNumber.wav'),
     );
   }
 
-  Expanded Key({required Color color, required int soundNumber}) {
+  Expanded key({required Color color, required int soundNumber}) {
     return Expanded(
       child: Container(
         color: color,
         child: ElevatedButton(
           onPressed: () {
-            PlaySound(soundNumber);
+            playSound(soundNumber);
           },
           child: null,
         ),
@@ -38,14 +38,13 @@ class _XylophoneScreenState extends State<XylophoneScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Key(color: Colors.red, soundNumber: 1),
-            Key(color: Colors.orange, soundNumber: 2),
-            Key(color: Colors.yellow, soundNumber: 3),
-            Key(color: Colors.lightGreen, soundNumber: 4),
-            Key(color: Colors.green, soundNumber: 5),
-            Key(color: Colors.blue, soundNumber: 6),
-            Key(color: Colors.purple, soundNumber: 7),
-            
+            key(color: Colors.red, soundNumber: 1),
+            key(color: Colors.orange, soundNumber: 2),
+            key(color: Colors.yellow, soundNumber: 3),
+            key(color: Colors.lightGreen, soundNumber: 4),
+            key(color: Colors.green, soundNumber: 5),
+            key(color: Colors.blue, soundNumber: 6),
+            key(color: Colors.purple, soundNumber: 7),
           ],
         ),
       ),
