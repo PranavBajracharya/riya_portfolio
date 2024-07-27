@@ -1,7 +1,4 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class MiCardScreen extends StatelessWidget {
   const MiCardScreen({super.key});
@@ -27,7 +24,7 @@ class MiCardScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Text(
@@ -52,7 +49,7 @@ class MiCardScreen extends StatelessWidget {
                   const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.5),
               color: Colors.white,
               child: ListTile(
-                leading: Icon(
+                leading: const Icon(
                   Icons.phone,
                   color: Colors.teal,
                 ),
@@ -72,7 +69,7 @@ class MiCardScreen extends StatelessWidget {
                 horizontal: 25.0,
               ),
               child: ListTile(
-                leading: Icon(
+                leading: const Icon(
                   Icons.email,
                   color: Colors.teal,
                 ),

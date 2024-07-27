@@ -16,8 +16,8 @@ class _QuizzlerScreenState extends State<QuizzlerScreen> {
         children: [
           Expanded(
             child: Container(
-              margin: EdgeInsets.only(top: 150.0),
-              child: Text(
+              margin: const EdgeInsets.only(top: 150.0),
+              child: const Text(
                 'This is where the question text will go.',
                 style: TextStyle(
                   color: Colors.white,
@@ -31,7 +31,7 @@ class _QuizzlerScreenState extends State<QuizzlerScreen> {
               color: Colors.green,
               child: ElevatedButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   'True',
                   style: TextStyle(
                     fontSize: 30.0,
@@ -40,7 +40,7 @@ class _QuizzlerScreenState extends State<QuizzlerScreen> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20.0,
           ),
           Expanded(
@@ -48,7 +48,7 @@ class _QuizzlerScreenState extends State<QuizzlerScreen> {
               color: Colors.red,
               child: ElevatedButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   'False',
                   style: TextStyle(
                     fontSize: 30.0,

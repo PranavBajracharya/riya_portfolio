@@ -23,7 +23,7 @@ class _DiceScreenState extends State<DiceScreen> {
     return Scaffold(
       backgroundColor: Colors.red,
       appBar: AppBar(
-        title: Text('Dicee'),
+        title: const Text('Dicee'),
         backgroundColor: Colors.red,
       ),
       body: Center(
