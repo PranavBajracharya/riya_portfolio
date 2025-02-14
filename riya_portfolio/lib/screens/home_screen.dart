@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:riya_portfolio/screens/bitcoin_ticker/price_screen.dart';
+import 'package:riya_portfolio/screens/bmi_calculator/screens/bmi_calculator_screen.dart';
+import 'package:riya_portfolio/screens/clima/screens/loading_screen.dart';
+import 'package:riya_portfolio/screens/fake_store/fake_store_screen.dart';
+import 'package:riya_portfolio/screens/flash_chat/screens/welcome_screen.dart';
 import 'package:riya_portfolio/screens/magic_8_ball/magic_ball_screen.dart';
 import 'package:riya_portfolio/screens/dice/dice_screen.dart';
 import 'package:riya_portfolio/screens/i_am_poor/i_am_poor_screen.dart';
@@ -131,6 +136,72 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
               title: const Text('Quizzler'),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const BmiCalculatorScreen();
+                    },
+                  ),
+                );
+              },
+              title: const Text('BMI Calculator'),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const LoadingScreen();
+                    },
+                  ),
+                );
+              },
+              title: const Text('Clima'),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return FakeStoreScreen();
+                    },
+                  ),
+                );
+              },
+              title: const Text('Fake Store'),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return PriceScreen();
+                    },
+                  ),
+                );
+              },
+              title: Text('BitCoin Ticker'),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return WelcomeScreen();
+                      
+                    },
+                  ),
+                );
+              },
+              title: Text('Flash Chat'),
             )
           ],
         ),
